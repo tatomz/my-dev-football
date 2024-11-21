@@ -1,0 +1,314 @@
+
+/**--------------------- container & advertise ---------------------*/
+
+.main-container {
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100vh;
+  max-width: 1400px;
+}
+
+.takeover.default.main-container .takeover-header {
+  background-image: var(--to-bg-ads-desktop);
+  background-color: var(--to-bg-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: center;
+  background-position-y: top;
+  height: 115px;
+  position: sticky;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 8;
+}
+
+.takeover.default.main-container .takeover-link {
+  display: block;
+  height: 100%;
+}
+
+.takeover.default.main-container .takeover-bg {
+  background-image: var(--to-bg-ads-desktop);
+  background-color: var(--to-bg-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: center;
+  background-position-y: top;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 678px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@media only screen and (min-width: 1280px) {
+  /**------ container & advertise ------*/
+  .takeover.default.main-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  /**------ menu ------*/
+  .main-container .main-menu {
+    flex: 0 0 210px;
+  }
+  .takeover.default.main-container .nav-container {
+    background: transparent;
+  }
+  .nav-header {
+    height: 150px;
+  }
+  .nav-main-content .nav {
+    order: 1;
+  }
+  .main-container.default.takeover .nav-item a span.nav-item-text, .main-container.default.takeover .nav-item button span.nav-item-text {
+    color: var(--to-menu-color);
+  }
+  .main-container.default.takeover .nav-item:hover .nav-item-text {
+    color: var(--to-menu-color-active);
+  }
+}
+
+/**--------------------- main menu ---------------------*/
+
+.main-menu {
+  display: flex;
+  flex: 0 0 150px;
+  height: 100vh;
+}
+
+.nav-container {
+  width: 150px;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+}
+
+.nav-main-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: calc(100vh - 150px);
+}
+
+.nav-container .mobile-nav-header {
+  transform-origin: 0 50%;
+  transition-timing-function: ease;
+  transition-duration: .3s;
+  transition-delay: .3s;
+  transition-property: opacity;
+  opacity: 0;
+}
+
+.mobile-nav-header {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  transition-timing-function: ease;
+  transition-duration: .15s;
+  transition-property: opacity;
+  height: 90px;
+  width: 100%;
+  margin: 0 54px 12px 54px;
+  max-width: calc(100% - 108px);
+}
+
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  transition-timing-function: ease;
+  transition-duration: .15s;
+  transition-property: transform;
+}
+
+.nav-item {
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition-timing-function: ease;
+  transition-duration: .25s;
+  transition-property: background;
+  position: relative;
+}
+
+.nav-container li.nav-item {
+  transition: all .2s ease;
+}
+
+.nav-container li.nav-item:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.nav-left-col {
+  width: 40px;
+}
+  
+.nav-left-col .nav-item-bar.active-nav {
+  width: 25px;
+}
+
+.nav-item-bar {
+  width: 0;
+  transition: width .3s;
+  height: 1px;
+  background: #000;
+}
+
+.nav-right-col {
+  display: flex;
+}
+
+.nav-item-text {
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  font-size:15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**------------------------------------------*/
+
+
+
+.main-container.layout-homepage .main-content {
+  width: 1190px;
+  flex: unset;
+  background: white;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+@media only screen and (min-width: 1280px) {
+  .main-container.layout-homepage .main-content {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .main-container.default.takeover .nav-item a span.nav-item-text, .main-container.default.takeover .nav-item button span.nav-item-text {
+    color: var(--to-menu-color);
+  }
+}
+
+.main-container .main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.main-container.layout-homepage .main-content .layout-content-container {
+  margin: 0 auto;
+  max-width: 1214px;
+}
+
+.main-container.layout-homepage .main-content .layout-content-container.right-rail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-container .main-content .layout-content-container {
+  margin: 0 100px;
+  max-width: calc(100% - 200px);
+  width: 100%;
+  height: 100%;
+}
+
+.main-container.layout-homepage .layout-content.right-rail .right-rail-content {
+  width: 360px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+
+
+@media only screen and (max-width: 1279px) {
+  .takeover.default.main-container .takeover-header {
+    background-image: var(--to-bg-ads-tablet);
+    background-size: contain;
+    background-position-y: bottom;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    height: 90px;
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .takeover.default.main-container .takeover-header {
+    background-image: var(--to-bg-ads-mobile);
+    background-size: contain;
+    background-position-y: bottom;
+    height: 72px;
+  }
+}
+
+
+
+@media only screen and (max-width: 1023px) {
+  .main-menu {
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .main-container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .takeover.default.main-container .takeover-bg {
+    display: none;
+  }
+  .takeover.default.main-container .main-content {
+    background: white;
+  }
+  .main-container.layout-homepage .main-content {
+    margin-left: 55px;
+    max-width: calc(100% - 55px);
+  }
+}
+
